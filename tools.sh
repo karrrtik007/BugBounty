@@ -1,0 +1,56 @@
+#!/bin/bash
+
+printf "MAKE SURE YOU HAVE CREATE 'tools' FOLDER IN HOME DIRECTORY"
+sleep 4
+echo ""
+echo ""
+
+echo "installing requirements"
+sudo apt-get -y install python3 golang git python-pip amass
+echo "done________________________________________________________________________________________________________________________________________________________________________________"
+
+echo "cloning Arjun"
+git clone https://github.com/s0md3v/Arjun.git
+echo "done________________________________________________________________________________________________________________________________________________________________________________"
+
+echo "cloning fuzzdb"
+git clone https://github.com/fuzzdb-project/fuzzdb.git
+echo "done________________________________________________________________________________________________________________________________________________________________________________"
+
+echo "cloning impacket"
+git clone https://github.com/SecureAuthCorp/impacket.git
+echo "done________________________________________________________________________________________________________________________________________________________________________________"
+
+echo "cloning paramspider"
+git clone https://github.com/devanshbatham/ParamSpider.git
+echo "done________________________________________________________________________________________________________________________________________________________________________________"
+
+echo "cloning seclists"
+git clone https://github.com/danielmiessler/SecLists.git
+echo "done________________________________________________________________________________________________________________________________________________________________________________"
+
+echo "cloning gobuster"
+wget https://github.com/OJ/gobuster/releases/download/v3.1.0/gobuster-linux-amd64.7z
+7z e gobuster-linux-amd64.7z
+rm -rf  gobuster-linux-amd64 gobuster-linux-amd64.7z
+echo "done, please move gobuster to /usr/local/bin________________________________________________________________________________________________________________________________________"
+
+echo "cloning anew"
+go get -u github.com/tomnomnom/anew
+mv ~/go/bin/anew ~/tools
+echo "done________________________________________________________________________________________________________________________________________________________________________________"
+
+echo "cloning httprobe"
+go get -u github.com/tomnomnom/httprobe
+mv ~/go/bin/httprobe ~/tools
+echo "done________________________________________________________________________________________________________________________________________________________________________________"
+
+echo "cloning assetfinder"
+go get -u github.com/tomnomnom/assetfinder
+mv ~/go/bin/assetfinder ~/tools
+echo "done________________________________________________________________________________________________________________________________________________________________________________"
+
+echo "cloning waybackurls"
+go get github.com/tomnomnom/waybackurls
+mv ~/go/bin/assetfinder ~/tools
+echo "done________________________________________________________________________________________________________________________________________________________________________________"
