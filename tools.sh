@@ -30,6 +30,10 @@ echo "cloning seclists"
 git clone https://github.com/danielmiessler/SecLists.git
 echo "done"
 
+echo "cloning rockyou.txt"
+wget https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwi_3_nB4YrzAhXXbSsKHZN7ChUQFnoECA0QAQ&url=https%3A%2F%2Fgithub.com%2Fbrannondorsey%2Fnaive-hashcat%2Freleases%2Fdownload%2Fdata%2Frockyou.txt&usg=AOvVaw3snAERl1mU6Ccr4WFEazBd
+echo "done"
+
 echo "cloning gobuster"
 wget https://github.com/OJ/gobuster/releases/download/v3.1.0/gobuster-linux-amd64.7z
 7z e gobuster-linux-amd64.7z
